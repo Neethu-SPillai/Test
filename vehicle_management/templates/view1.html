@@ -1,0 +1,20 @@
+{% extends 'home.html' %}
+{% load static %}
+{% block content  %}
+
+<h2 style="text-align:center;">Vehicle List</h2>
+<ul>
+{% for i in vehicles %}
+    <li>{{ i.vehicle_number }} </li>
+
+
+  <a href="{% url 'vehicles:vehicle_update' i.id %}" class="btn btn-success btn-sm">Update</a>
+  <a href="{% url 'vehicles:vehicle_delete' i.id %}" class="btn btn-success btn-sm">Delete</a>
+{% empty %}
+    <li>No vehicles found.</li>
+{% endfor %}
+
+</ul>
+<a href="{% url 'vehicles:vehicle_list'  %}" class="btn btn-success btn-lg">View</a>
+<a href="{% url 'vehicles:vehicle_create' %}" class="btn btn-primary " style="position:absolute;right:80px;top:180px;">ADD VEHICLES</a>
+{% endblock  %}

@@ -1,0 +1,28 @@
+{% extends 'home.html' %}
+{% load static %}
+{% block content  %}
+<div class="row ">
+{% for i in vehicles %}
+
+        <div class="col-sm-4 mt-4 p-5">
+            <div class="card bg-info" style="width: 18rem;height:200px;width:400px">
+                <div class="card-body" style ="position:relative;height:300px;margin-top:50px;">
+                        <h5 class="card-title " style="text-align:center;margin:20px;"><b>{{i.vehicle_number}}</b></h5>
+                        <p class="card-text" style="color:red;text-align:center;">
+                         <b>Vehicle Number:</b>{{i.vehicle_number}}<br>
+                         <b>Vehicle Type:</b>{{i.vehicle_type}}<br>
+                         <b>Vehicle Model:</b>{{i.vehicle_model}}<br>
+                         <b>Vehicle Description:</b>{{i.vehicle_description}}
+                        </p>
+                        </div>
+            </div>
+        </div>
+
+{% endfor %}
+
+
+</div>
+
+
+{% endblock  %}
+

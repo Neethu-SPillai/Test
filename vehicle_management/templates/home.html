@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+
+    <ul class="nav navbar-nav">
+
+
+        <li><a href="{% url 'user:signup' %}">SignUp</a></li>
+      <li><a href="{% url 'user:login' %}">login</a></li>
+      <li><a href="{% url 'user:logout' %}">logout</a></li>
+
+    </ul>
+  </div>
+</nav>
+
+<h3 class="text-center ">Vehicle Management System</h3>
+
+{% block content %}
+{% endblock %}
+</body>
+</html>

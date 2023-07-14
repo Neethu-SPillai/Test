@@ -1,0 +1,14 @@
+{% extends 'home.html' %}
+{% load static %}
+{% block content  %}
+<h1>Vehicle List</h1>
+<div class="container ">
+{% for i in vehicles %}
+    <ul>
+    <li><h3>{{ i.vehicle_number }} </h3></li></ul>
+{% empty %}
+    <li>No vehicles found.</li>
+{% endfor %}
+        <a href="{% url 'vehicles:vehicle_list'  %}" class="btn btn-success btn-lg"  style="position:absolute;right:800px;top:200px;" >View</a>
+</div>
+{% endblock  %}
